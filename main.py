@@ -10,9 +10,9 @@ search_results = modules.search_items(monitor_site)
 
 def main():    
     if search_results == True:
-        print(time.strftime("%d/%m/%y %X"), ": Request has to ", monitor_site, " succeeded and server is responding.\n")
+        print(time.strftime("%d/%m/%y %X"), ": Request to ", monitor_site, " succeeded and server is responding.\n")
         log_file = open(set_file,"a")
-        warning_text = (time.strftime("%d/%m/%y %X"), ": Request has to ", monitor_site, " succeeded and server is responding.\n")
+        warning_text = (time.strftime("%d/%m/%y %X"), ": Request to ", monitor_site, " succeeded and server is responding.\n")
         adding_logs = log_file.writelines(warning_text)
         log_file.close()
     else:
