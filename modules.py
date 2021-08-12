@@ -5,9 +5,13 @@ import config as config
 
 # Site status checking function
 def search_items(finding):
-    check_status = requests.get(finding, timeout=5)
-    print(check_status.ok)
-    return check_status.ok
+    try:
+        check_status = requests.get(finding, timeout=2)
+        server_status = check_status.status_code    
+    except Exception as e:
+        server_status = "none"         
+    print("Status code:", server_status)
+    return server_status
 
 # E-mail sending function
 def sending_mail():   
@@ -20,9 +24,7 @@ def sending_mail():
         smtp.starttls()
         smtp.ehlo()
         smtp.login(email_address, email_password)
-        subject = "Site ", monitoring_site, " is not responding."
+        subject = "Website", monitoring_site, "is not responding."
         body = "Message send by Python3 website monitoring script."
         msg = f"Subject: {subject}\n\n{body}"
         smtp.sendmail(email_address, sending_to, msg)
-
-        

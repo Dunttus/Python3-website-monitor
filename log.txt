@@ -1,3 +1,3 @@
-11/08/21 17:12:17: Request has to http://dunttus.com succeeded and server is responding.
-11/08/21 17:13:04: No response from http://dunttus.com sending warning email.
-11/08/21 17:14:06: Request has to http://dunttus.com succeeded and server is responding.
+12/08/21 23:23:58: Request to http://dunttus.com succeeded and server is responding.
+12/08/21 23:24:08: No response from http://dunttus.com sending warning email.
+12/08/21 23:24:41: Request to http://dunttus.com succeeded and server is responding.
