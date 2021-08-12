@@ -5,7 +5,7 @@ import config as config
 
 # Site status checking function
 def search_items(finding):
-    check_status = requests.get(finding)
+    check_status = requests.get(finding, timeout=5)
     print(check_status.ok)
     return check_status.ok
 
