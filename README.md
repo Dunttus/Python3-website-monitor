@@ -1,6 +1,8 @@
 # Python3-website-monitor
-Simple crash monitoring tool for websites. When website goes down you will receive email from added email address. Program recomemded to use with Linux Cron job by scheduling main.py.
+Simple crash monitoring tool for websites. When the website goes down you will receive an email from an added email address. Program recommended to use with Linux Cron job by scheduling main.py.
+### Requirements
+* Working internet connection
+* Python 3.8
+    + Python3 requests
 ### Usage
-Dockerfile can be used for testing program in container. First add your own parameters inside the config.py file.
-Open crontab  with command `crontab -e` and insert `* * * * * python3 main.py` at end of the crometab file. This will run python script every minute.
-
+Start by adding your own parameters inside the config.py file. Dockerfile included with github repository can be used for testing programs but recommended running as Linux cron job. Open crontab  with command `crontab -e` and insert `*/20 * * * * python3 main.py` at the end of the crontab file. Using absolute paths in crontab for python3 and the main.py file is recommended. This will run this website-monitor script every 20 minutes.
